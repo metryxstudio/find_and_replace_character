@@ -15,7 +15,8 @@ ___INFO___
   "displayName": "Find and Replace Character",
   "description": "Finds a specific character in a string and replaces it with another character, or removes it entirely if no replacement is specified.",
   "containerContexts": [
-    "SERVER"
+    "SERVER",
+    "WEB"
   ],
   "categories": ["UTILITY"],
   "brand": {
@@ -78,6 +79,42 @@ for (var i = 0; i < str.length; i++) {
 }
 
 return result;
+
+
+___SANDBOXED_JS_FOR_WEB_TEMPLATE___
+
+var makeString = require('makeString');
+
+var input = data.inputValue;
+var findChar = data.findCharacter;
+var replaceWith = data.replaceWith || '';
+
+if (input === undefined || input === null) {
+  return undefined;
+}
+
+if (!findChar) {
+  return makeString(input);
+}
+
+var str = makeString(input);
+var result = '';
+
+for (var i = 0; i < str.length; i++) {
+  if (str[i] === findChar) {
+    result += replaceWith;
+  } else {
+    result += str[i];
+  }
+}
+
+return result;
+
+
+
+___WEB_PERMISSIONS___
+
+[]
 
 
 ___SERVER_PERMISSIONS___

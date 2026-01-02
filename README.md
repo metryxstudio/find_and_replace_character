@@ -1,6 +1,6 @@
 # Find and Replace Character
 
-A server-side Google Tag Manager variable template that finds a specific character in a string and replaces it with another character, or removes it entirely if no replacement is specified.
+A Google Tag Manager variable template for both web and server containers that finds a specific character in a string and replaces it with another character, or removes it entirely if no replacement is specified.
 
 ## Overview
 
@@ -8,7 +8,7 @@ This template provides a simple way to find and replace (or remove) single chara
 
 ## Installation
 
-1. In your server-side GTM container, go to **Templates** → **Variable Templates** → **Search Gallery**
+1. In your GTM container (web or server-side), go to **Templates** → **Variable Templates** → **Search Gallery**
 2. Search for "Find and Replace Character"
 3. Click **Add to workspace**
 
@@ -83,6 +83,12 @@ Convert kebab-case to snake_case:
 - If the find character is not found, the original string is returned
 - If input is `undefined` or `null`, returns `undefined`
 - Numeric inputs are automatically converted to strings
+
+## Compatibility
+
+This template works in both:
+- **Web GTM** containers
+- **Server-side GTM** containers
 
 ## Author
 
