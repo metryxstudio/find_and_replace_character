@@ -1,0 +1,5 @@
+homepage: "https://github.com/metryxstudio/find-and-replace-character"
+documentation: "https://github.com/metryxstudio/find-and-replace-character#readme"
+versions:
+  - sha: # Add your commit SHA after pushing to GitHub
+    changeNotes: "Initial release"
