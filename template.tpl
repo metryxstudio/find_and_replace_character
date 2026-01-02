@@ -52,11 +52,11 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_SERVER___
 
-const makeString = require('makeString');
+var makeString = require('makeString');
 
-const input = data.inputValue;
-const findChar = data.findCharacter;
-const replaceWith = data.replaceWith || '';
+var input = data.inputValue;
+var findChar = data.findCharacter;
+var replaceWith = data.replaceWith || '';
 
 if (input === undefined || input === null) {
   return undefined;
@@ -66,10 +66,10 @@ if (!findChar) {
   return makeString(input);
 }
 
-const str = makeString(input);
-let result = '';
+var str = makeString(input);
+var result = '';
 
-for (let i = 0; i < str.length; i++) {
+for (var i = 0; i < str.length; i++) {
   if (str[i] === findChar) {
     result += replaceWith;
   } else {
